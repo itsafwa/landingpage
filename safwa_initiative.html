@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مبادرة صفوة | Safwa Initiative</title>
+    
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            light: '#2a2d4f',
+                            DEFAULT: '#1a1b35', // Extracted dark blue
+                            dark: '#111224'
+                        },
+                        gold: {
+                            light: '#f1d582',
+                            DEFAULT: '#d4af37', // Extracted gold
+                            dark: '#b3902a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Utilities */
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b3902a; 
+        }
+
+        /* Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Card Hover Effects */
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(26, 27, 53, 0.1);
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #d4af37, #f1d582);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Pattern Overlay */
+        .pattern-bg {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-navy/95 backdrop-blur-md text-white shadow-lg border-b border-gold/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="0005.jpg" alt="شعار صفوة" class="h-12 w-12 rounded-full object-cover border border-gold/50" onerror="this.src='https://placehold.co/100x100/1a1b35/d4af37?text=صفوة'">
+                <span class="text-2xl font-bold text-gold">صفوة</span>
+            </div>
+            <div class="hidden md:flex gap-6 font-medium">
+                <a href="#hero" class="hover:text-gold transition">الرئيسية</a>
+                <a href="#goals" class="hover:text-gold transition">الأهداف</a>
+                <a href="#initiatives" class="hover:text-gold transition">المبادرات</a>
+                <a href="#programs" class="hover:text-gold transition">البرامج العامة</a>
+            </div>
+            <button class="md:hidden text-gold text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center bg-navy pt-20 overflow-hidden pattern-bg">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <!-- decorative background elements -->
+            <div class="absolute top-1/4 -right-20 w-96 h-96 bg-gold rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+            <div class="absolute bottom-1/4 -left-20 w-96 h-96 bg-blue-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="reveal">
+                <img src="0003.jpg" alt="شعار مبادرة صفوة" class="mx-auto h-40 w-40 rounded-full shadow-2xl border-4 border-gold/30 mb-8 object-cover" onerror="this.src='https://placehold.co/200x200/1a1b35/d4af37?text=صفوة'">
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight">مبادرة <span class="text-gradient">صفوة</span></h1>
+                <p class="text-xl md:text-2xl text-gray-300 font-light mb-12 max-w-2xl mx-auto">
+                    مبادرة تُعنى بإنتاج المبادرات الثقافية
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto reveal delay-200">
+                <!-- Mission Card -->
+                <div class="bg-white/10 backdrop-blur-md border border-gold/30 p-8 rounded-2xl text-center hover-card relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gold/5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <div class="w-16 h-16 mx-auto bg-gold text-navy rounded-full flex items-center justify-center text-3xl mb-6 shadow-lg relative z-10">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gold mb-4 relative z-10">الرسالة</h3>
+                    <p class="text-white text-lg relative z-10 leading-relaxed">ابتكار وتصميم حلول تساهم في الارتقاء الثقافي.</p>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="bg-white/10 backdrop-blur-md border border-gold/30 p-8 rounded-2xl text-center hover-card relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gold/5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <div class="w-16 h-16 mx-auto bg-gold text-navy rounded-full flex items-center justify-center text-3xl mb-6 shadow-lg relative z-10">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gold mb-4 relative z-10">الرؤية</h3>
+                    <p class="text-white text-lg relative z-10 leading-relaxed">تفعيل الطاقات الشبابية لصناعة مشاريع ثقافية نافعة تخدم الأمة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Goals Section -->
+    <section id="goals" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-bold text-navy mb-4 inline-block relative">
+                    الأهداف العامة
+                    <div class="absolute -bottom-2 right-0 w-1/2 h-1 bg-gold rounded"></div>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="bg-gray-50 p-6 rounded-2xl border-r-4 border-gold shadow-sm hover-card reveal flex items-start gap-4">
+                    <div class="text-gold text-2xl mt-1"><i class="fas fa-mosque"></i></div>
+                    <p class="text-navy font-semibold text-lg">ترسيخ الهوية الإسلامية وإحياء روح العزة بالإسلام.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border-r-4 border-gold shadow-sm hover-card reveal delay-100 flex items-start gap-4">
+                    <div class="text-gold text-2xl mt-1"><i class="fas fa-heart"></i></div>
+                    <p class="text-navy font-semibold text-lg">تثبيت الإيمان وتعزيز مكارم الأخلاق.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border-r-4 border-gold shadow-sm hover-card reveal delay-200 flex items-start gap-4">
+                    <div class="text-gold text-2xl mt-1"><i class="fas fa-book-open"></i></div>
+                    <p class="text-navy font-semibold text-lg">توثيق الارتباط بالقرآن الكريم والسنة النبوية والعلوم الشرعية.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border-r-4 border-gold shadow-sm hover-card reveal flex items-start gap-4">
+                    <div class="text-gold text-2xl mt-1"><i class="fas fa-seedling"></i></div>
+                    <p class="text-navy font-semibold text-lg">تنمية الخبرات والمهارات التربوية والسلوكية.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border-r-4 border-gold shadow-sm hover-card reveal delay-100 flex items-start gap-4">
+                    <div class="text-gold text-2xl mt-1"><i class="fas fa-users"></i></div>
+                    <p class="text-navy font-semibold text-lg">تكوين مجتمعات معرفية وبيئات تفاعلية أخوية صالحة.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border-r-4 border-gold shadow-sm hover-card reveal delay-200 flex items-start gap-4">
+                    <div class="text-gold text-2xl mt-1"><i class="fas fa-brain"></i></div>
+                    <p class="text-navy font-semibold text-lg">تطوير الملكات الفكرية والأدبية وصقلها.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initiatives Section -->
+    <section id="initiatives" class="pt-24 bg-gray-50">
+        <!-- Madarij Al-Qari'een -->
+        <div class="container mx-auto px-6 mb-24">
+            <div class="bg-navy rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden reveal">
+                <!-- Decorative BG -->
+                <div class="absolute top-0 left-0 w-full h-full pattern-bg opacity-10 pointer-events-none"></div>
+                
+                <div class="flex flex-col lg:flex-row gap-12 relative z-10">
+                    <div class="lg:w-1/3">
+                        <img src="photo_2024-08-03_19-23-36.jpg" alt="مدارج القارئين" class="rounded-xl shadow-lg border-2 border-gold/30 mb-6 w-full object-cover" onerror="this.src='https://placehold.co/600x800/1a1b35/d4af37?text=مدارج+القارئين'">
+                        <h3 class="text-3xl font-bold text-gold mb-4">مدارج القارئين</h3>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-6">
+                            مبادرة تهتم ببث ثقافة القراءة وتعزيز أثرها وتنمية الوعي بمجالات القراءة المتنوعة ومهاراتها.
+                        </p>
+                        
+                        <h4 class="text-xl font-bold text-white mb-3 border-r-2 border-gold pr-3">الأهداف العامة:</h4>
+                        <ul class="text-gray-300 space-y-2 mb-8">
+                            <li><i class="fas fa-check text-gold ml-2 text-sm"></i> التشجيع على القراءة وبث ثقافتها.</li>
+                            <li><i class="fas fa-check text-gold ml-2 text-sm"></i> تعزيز آثار القراءة وتعميق أهدافها.</li>
+                            <li><i class="fas fa-check text-gold ml-2 text-sm"></i> تنمية الوعي بالمجالات القرائية المتنوعة.</li>
+                            <li><i class="fas fa-check text-gold ml-2 text-sm"></i> تحسين مهارات القراءة.</li>
+                            <li><i class="fas fa-check text-gold ml-2 text-sm"></i> تكوين مجتمعات معرفية وبيئات تفاعلية أخوية صالحة.</li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:w-2/3">
+                        <h4 class="text-2xl font-bold text-white mb-8 bg-gold/20 inline-block px-4 py-2 rounded-lg">مسارات المبادرة:</h4>
+                        
+                        <!-- Track 1 -->
+                        <div class="mb-8 bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-gold/30 transition">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-navy font-bold text-xl shadow-lg">صروح</div>
+                                <h5 class="text-2xl font-bold text-gold">مسار صروح</h5>
+                            </div>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                مسار يختص بصناعة ثقافة القارئ وتنمية مهاراته وتكوين معارفه في العلوم والفنون المختلفة.
+                            </p>
+                            <h6 class="text-white font-semibold mb-3">البرامج:</h6>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-navy-dark p-4 rounded-xl border border-white/5">
+                                    <h6 class="text-gold font-bold mb-2">بوابة القراءة</h6>
+                                    <p class="text-gray-400 text-sm leading-relaxed">برنامج تأهيلي يسعى إلى صناعة عادة القراءة وتنمية الوعي بأهميتها ومهاراتها ووسائلها من خلال خطوات عملية متدرجة تشمل لقاءات حصرية وقراءات فردية وجماعية وجلسات نقاشية وأنشطة تطبيقية ومواد إثرائية.</p>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="bg-navy-dark p-4 rounded-xl border border-white/5 flex items-center gap-3">
+                                        <i class="fas fa-book text-gold"></i>
+                                        <span class="text-gray-300 font-medium">مدارات القراءة</span>
+                                    </div>
+                                    <div class="bg-navy-dark p-4 rounded-xl border border-white/5 flex items-center gap-3">
+                                        <i class="fas fa-book text-gold"></i>
+                                        <span class="text-gray-300 font-medium">فضاءات القراءة</span>
+                                    </div>
+                                    <div class="bg-navy-dark p-4 rounded-xl border border-white/5 flex items-center gap-3">
+                                        <i class="fas fa-book text-gold"></i>
+                                        <span class="text-gray-300 font-medium">كفايات القراءة</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Track 2 -->
+                        <div class="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-gold/30 transition">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-navy font-bold text-xl shadow-lg">عروج</div>
+                                <h5 class="text-2xl font-bold text-gold">مسار عروج</h5>
+                            </div>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                مسار يهتم بالبناء السلوكي والتزكوي.
+                            </p>
+                            <h6 class="text-white font-semibold mb-3">البرامج:</h6>
+                            <div class="bg-navy-dark p-4 rounded-xl border border-white/5 inline-block">
+                                <h6 class="text-gold font-bold mb-1">قوت</h6>
+                                <p class="text-gray-400 text-sm">برنامج قراءة الرسائل التزكوية القصيرة.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Madarij Al-Adab -->
+        <div class="container mx-auto px-6 pb-24">
+            <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-100 reveal">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    
+                    <div class="lg:w-1/3">
+                        <img src="تعريف مدارج الأدب.jpg" alt="مدارج الأدب" class="rounded-xl shadow-lg border-2 border-gold/30 mb-6 w-full object-cover" onerror="this.src='https://placehold.co/600x800/ffffff/d4af37?text=مدارج+الأدب'">
+                        <h3 class="text-3xl font-bold text-navy mb-4">مدارج الأدب</h3>
+                        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                            مبادرة ثقافية متخصصة في تصميم برامج معرفية وإنتاج خطط قرائية تساهم في: إحياء روح الاعتزاز باللغة العربية وتقريب الأدب العربي وكتبه وتنمية ملكة البيان والتذوق.
+                        </p>
+                        
+                        <div class="bg-gray-50 p-4 rounded-xl border-r-4 border-gold mb-8">
+                            <h4 class="text-lg font-bold text-navy mb-2">الفئة المستهدفة:</h4>
+                            <p class="text-gray-600 text-sm">المهتمون باللغة العربية والأدب العربي وشداة الثقافة وطلبة العلم خصوصًا، وأبناء العربية عمومًا.</p>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-navy mb-3 border-r-2 border-gold pr-3">الأهداف العامة:</h4>
+                        <ul class="text-gray-600 space-y-3 mb-8 text-sm">
+                            <li class="flex items-start gap-2"><i class="fas fa-dot-circle text-gold mt-1 text-xs"></i> عمل مساقات علمية تعين على تكوين الملكة الأدبية.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-dot-circle text-gold mt-1 text-xs"></i> تصميم برامج متنوعة تُعرِّف بعيون التراث الأدبي العربي وتقرِّبها إلى الجمهور.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-dot-circle text-gold mt-1 text-xs"></i> عمل برامج وإنتاج مواد تُعَزِّز الوعي اللغوي وتعمِّق الثقافة العربية.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-dot-circle text-gold mt-1 text-xs"></i> تقديم مكتبة مرئية واسعة تُثرِي طالب الأدب والعربية.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-dot-circle text-gold mt-1 text-xs"></i> بثُّ ثقافة مناقشات الكتب وتنميتها عند القراء.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-dot-circle text-gold mt-1 text-xs"></i> إيجاد بيئة تفاعلية نشطة تحفز القراء وتُساعد على تبادل المعرفة.</li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:w-2/3">
+                        <h4 class="text-2xl font-bold text-navy mb-8 bg-navy/5 inline-block px-4 py-2 rounded-lg">مسارات المبادرة:</h4>
+                        
+                        <!-- Track Mirqat -->
+                        <div class="mb-8 bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-navy flex items-center justify-center text-gold font-bold text-xl shadow-lg">مرقاة</div>
+                                <div>
+                                    <h5 class="text-2xl font-bold text-navy">مسار مرقاة</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg mb-6 border-r-4 border-navy">
+                                <strong class="text-navy">الرسالة:</strong> تقديم برامج منهجية تُكوِّن الملكة الأدبية وتُقرِّب عيون الأدب العربي.
+                            </div>
+
+                            <div class="mb-6">
+                                <strong class="text-navy block mb-2">الأهداف:</strong>
+                                <ol class="list-decimal list-inside text-gray-600 space-y-1 text-sm bg-white p-4 rounded border">
+                                    <li>تحصيل ما يحتاجه الأديب من ثقافة ومعرفة باللغة والتاريخ وغيرها من المعارف الأدبية.</li>
+                                    <li>الاطلاع على الكتب والمدونات الأساسية في الأدب العربي.</li>
+                                    <li>تعزيز مهارات قراءة الكتب والنصوص الأدبية العربية.</li>
+                                    <li>تعزيز مهارات الكتابة العربية.</li>
+                                </ol>
+                            </div>
+
+                            <h6 class="text-navy font-bold mb-4 text-lg border-b pb-2">البرامج:</h6>
+                            <div class="space-y-6">
+                                <!-- Program 1 -->
+                                <div class="relative pl-4 border-r-2 border-gold/50 pr-4">
+                                    <h6 class="text-gold font-bold text-lg mb-2">1. بوابة الأدب: <span class="text-navy font-semibold text-base">مدخل إلى الأدب العربي</span></h6>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        بوابة الأدب هو أول برامج الأدب العربي ضمن مسار مرقاة، ويقدم مدخلًا مُيسَّرًا إلى الأدب العربي يجمع بين التأسيس المنهجي وبين العرض التاريخي، مع قراءة نصوص أدبية مُنتخبة، ولقاءات نقاشية، وأنشطة تطبيقية، ومواد إثرائية؛ تهدف إلى تنمية مهارات القراءة الأدبية، ورسم الخارطة المعينة لتكوين الملكة الأدبية.
+                                    </p>
+                                </div>
+                                <!-- Program 2 -->
+                                <div class="relative pl-4 border-r-2 border-gold/50 pr-4">
+                                    <h6 class="text-gold font-bold text-lg mb-2">2. زبدة الأدب: <span class="text-navy font-semibold text-base">تكوين أصول الثقافة الأدبية</span></h6>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        هو ثاني برامج مسار مرقاة، نهدف فيه إلى تكوين أصول الثقافة الأدبية للمتأدبين، وتتوزع العلوم والمعارف على تسعة فروع: الثقافة العربية، متن اللغة، تاريخ الأدب، مصادر الأدب، مهارات القراءة الأدبية، الشعر والنثر، إعجاز القرآن، الكتابة والإنشاء، النقد الأدبي. وتضم تكليفات البرنامج قراءات ومواد مسموعة وأنشطة ونقاشات.
+                                    </p>
+                                </div>
+                                <!-- Program 3 -->
+                                <div class="relative pl-4 border-r-2 border-gold/50 pr-4">
+                                    <h6 class="text-gold font-bold text-lg mb-2">3. غور الأدب: <span class="text-navy font-semibold text-base">قراءة أصول الأدب العربي</span></h6>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        ثالث وآخر برامج مسار مرقاة، نقرأ فيه أصول الأدب العربي ونتعمق في تاريخه وفنونه. تتوزع المعارف على ثلاثة مساقات: تاريخ الأدب والثقافة العربية، النثر والكتابة والإنشاء، الشعر والنقد الأدبي. يضم قراءات ومواد مسموعة وأنشطة كتابية وتقويمات.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Track Jamhara -->
+                        <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover-card">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-navy flex items-center justify-center text-gold font-bold text-xl shadow-lg">جمهرة</div>
+                                <div>
+                                    <h5 class="text-2xl font-bold text-navy">مسار جمهرة</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg mb-6 border-r-4 border-navy">
+                                <strong class="text-navy">الرسالة:</strong> تعميق الثقافة الأدبية بالاطلاع على الأعمال الكاملة لعدد من الأدباء.
+                            </div>
+
+                            <div class="mb-4">
+                                <strong class="text-navy block mb-2">الأهداف:</strong>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm bg-white p-4 rounded border">
+                                    <li>قراءة كل المؤلفات الخاصة بالأدباء الذين لهم نتاج أدبي رائق.</li>
+                                    <li>التعرف على الأدباء المتميزين والكشف عن جوانب شخصياتهم.</li>
+                                    <li>التدريب على الكتابة الأدبية من خلال محاكاة الأدباء.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gold/10 p-3 rounded text-sm text-navy">
+                                <strong>الفئة المستهدفة:</strong> عامة المهتمين بالأدب العربي، والراغبين بالتعمق في القراءة لأدباء مخصوصين.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Programs Section -->
+    <section id="programs" class="py-24 bg-navy relative overflow-hidden pattern-bg">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-bold text-white mb-4 inline-block relative">
+                    البرامج العامة للمبادرة
+                    <div class="absolute -bottom-2 right-0 w-1/2 h-1 bg-gold rounded"></div>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-white/5 backdrop-blur-md border border-gold/20 p-8 rounded-2xl hover-card reveal">
+                    <div class="w-14 h-14 bg-gold rounded-xl flex items-center justify-center text-navy text-2xl mb-6 shadow-lg">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gold mb-3">مُثَاقَفَة</h3>
+                    <p class="text-gray-300 mb-4 text-sm leading-relaxed border-b border-white/10 pb-4">
+                        برنامج يختص بالتحصيل المُرَكّز في علوم العربية والأدب بعِدّةِ مواسم متنوعة.
+                    </p>
+                    <div class="bg-black/20 p-4 rounded-lg">
+                        <h4 class="text-white font-semibold mb-2 text-sm">الموسم الأول: مناهل العربية</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            موسم ثقافي ندور فيه في فلك اللغة العربية، نتبين فضلها ومحاسنها وخصائصها وتأثيرها ومنزلتها بين اللغات، مجيبين بهذا عن سؤال "لماذا العربية؟"، متبصرين بذلك مستقبل اللغة العربية ومركزيتها بالنسبة لنا.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-white/5 backdrop-blur-md border border-gold/20 p-8 rounded-2xl hover-card reveal delay-100">
+                    <div class="w-14 h-14 bg-gold rounded-xl flex items-center justify-center text-navy text-2xl mb-6 shadow-lg">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gold mb-3">مأدُبة</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        برنامج قرائي عام يهدف إلى تقريب القراءة في الأدب العربي بانتقاء جيد الكتب الأدبية وترتيب جداول ميسرة لقراءتها مع تنظيم جلسات نقاشية.
+                    </p>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-white/5 backdrop-blur-md border border-gold/20 p-8 rounded-2xl hover-card reveal delay-200">
+                    <div class="w-14 h-14 bg-gold rounded-xl flex items-center justify-center text-navy text-2xl mb-6 shadow-lg">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gold mb-3">مسامرات المتأدبين</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        أمسيات شعرية مباشرة نتسامر فيها مع الأدباء مطوفين حول عيون القصائد العربية، نتذوق جمالها ونتبين حُسنها.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-dark border-t border-gold/20 pt-16 pb-8 text-center relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <img src="1.png" alt="مبادرة صفوة" class="mx-auto h-24 mb-6 opacity-80 hover:opacity-100 transition" onerror="this.src='https://placehold.co/150x150/111224/d4af37?text=صفوة'">
+            <h2 class="text-3xl font-bold text-white mb-2">مبادرة صفوة</h2>
+            <p class="text-gold mb-8">ابتكار وتصميم حلول تساهم في الارتقاء الثقافي</p>
+            
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition shadow-lg">
+                    <i class="fab fa-x-twitter text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition shadow-lg">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition shadow-lg">
+                    <i class="fab fa-telegram-plane text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition shadow-lg">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+            </div>
+            
+            <p class="text-gold/70 text-lg">@itsafwa</p>
+            <div class="mt-12 border-t border-white/5 pt-8 text-gray-500 text-sm">
+                &copy; 2024 مبادرة صفوة. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Intersection Observer Script for Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
