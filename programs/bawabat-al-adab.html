@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة الأدب | مبادرة صفوة</title>
+    <meta name="description" content="بوابة الأدب: مدخل إلى الأدب العربي — أول برامج مسار مرقاة بمدارج الأدب.">
+    <link rel="icon" type="image/jpeg" href="../0003.jpg">
+    <style>
+        @font-face { font-family: 'thmanyah sans'; src: url('../assets/fonts/thmanyahsans-Light.woff2') format('woff2'); font-weight: 300; font-display: swap; }
+        @font-face { font-family: 'thmanyah sans'; src: url('../assets/fonts/thmanyahsans-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+        @font-face { font-family: 'thmanyah sans'; src: url('../assets/fonts/thmanyahsans-Medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+        @font-face { font-family: 'thmanyah sans'; src: url('../assets/fonts/thmanyahsans-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+        @font-face { font-family: 'thmanyah sans'; src: url('../assets/fonts/thmanyahsans-Black.woff2') format('woff2'); font-weight: 900; font-display: swap; }
+        @font-face { font-family: 'thmanyah serif display'; src: url('../assets/fonts/thmanyahserifdisplay-Light.woff2') format('woff2'); font-weight: 300; font-display: swap; }
+        @font-face { font-family: 'thmanyah serif display'; src: url('../assets/fonts/thmanyahserifdisplay-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+        @font-face { font-family: 'thmanyah serif display'; src: url('../assets/fonts/thmanyahserifdisplay-Medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+        @font-face { font-family: 'thmanyah serif display'; src: url('../assets/fonts/thmanyahserifdisplay-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+        @font-face { font-family: 'thmanyah serif display'; src: url('../assets/fonts/thmanyahserifdisplay-Black.woff2') format('woff2'); font-weight: 900; font-display: swap; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: {
+            colors: { navy: { light: '#2a2d4f', DEFAULT: '#1a1b35', dark: '#111224' }, gold: { light: '#f1d582', DEFAULT: '#d4af37', dark: '#b3902a' } },
+            fontFamily: { sans: ['thmanyah sans', 'sans-serif'], display: ['thmanyah serif display', 'serif'] }
+        } } }
+    </script>
+    <style>
+        body { font-family: 'thmanyah sans', sans-serif; background-color: #f8f9fa; color: #333; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'thmanyah serif display', serif; }
+        .pattern-bg { background-image: radial-gradient(rgba(212,175,55,.15) 1px, transparent 1px); background-size: 20px 20px; }
+        .hover-card { transition: transform .3s ease, box-shadow .3s ease; }
+        .hover-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(26,27,53,.12); }
+    </style>
+</head>
+<body>
+
+    <div class="bg-navy-dark text-white">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3">
+                <img src="../0003.jpg" alt="شعار مبادرة صفوة" class="h-11 w-11 rounded-full object-cover">
+                <span class="font-bold text-lg">مبادرة صفوة</span>
+            </a>
+            <a href="../index.html" class="text-gold hover:text-gold-light transition text-sm font-semibold"><i class="fas fa-arrow-right ml-2"></i>العودة إلى الصفحة الرئيسة</a>
+        </div>
+    </div>
+
+    <section class="bg-navy relative overflow-hidden pattern-bg">
+        <div class="container mx-auto px-6 py-16 relative z-10 text-center">
+            <div class="flex justify-center mb-6"><div class="h-28 w-28 rounded-3xl bg-gold/20 border-2 border-gold/40 flex items-center justify-center text-gold text-5xl shadow-lg"><i class="fas fa-book"></i></div></div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">بوابة الأدب</h1>
+            <p class="text-gold text-xl mb-6">مدخل إلى الأدب العربي — أول برامج مسار مرقاة</p>
+            <div class="flex justify-center flex-wrap gap-2"><a href="../index.html#initiatives" class="bg-white/10 hover:bg-gold hover:text-navy transition text-gold-light text-sm px-4 py-1.5 rounded-full border border-gold/30">مدارج الأدب</a><a href="../tracks/mirqah.html" class="bg-white/10 hover:bg-gold hover:text-navy transition text-gold-light text-sm px-4 py-1.5 rounded-full border border-gold/30">مسار مرقاة</a></div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-14 max-w-4xl">
+
+            <div class="bg-white rounded-3xl p-8 shadow-md border border-gray-100 mb-8">
+                <h2 class="text-2xl font-bold text-navy mb-5 border-r-4 border-gold pr-3"><i class="fas fa-book-open text-gold ml-2"></i>عن البرنامج</h2>
+                <p class="text-gray-600 leading-loose text-lg">بوابة الأدب هو أول برامج الأدب العربي ضمن مسار مرقاة، ويقدم مدخلًا مُيسَّرًا إلى الأدب العربي يجمع بين التأسيس المنهجي وبين العرض التاريخي، مع قراءة نصوص أدبية مُنتخبة، ولقاءات نقاشية، وأنشطة تطبيقية، ومواد إثرائية؛ تهدف إلى تنمية مهارات القراءة الأدبية، ورسم الخارطة المعينة لتكوين الملكة الأدبية.</p>
+            </div>
+    </main>
+    <footer class="bg-navy-dark border-t border-gold/20 py-10 text-center mt-16">
+        <div class="container mx-auto px-6">
+            <img src="../0003.jpg" alt="شعار مبادرة صفوة" class="mx-auto h-16 w-16 rounded-full object-cover mb-4 opacity-90">
+            <p class="text-white font-bold text-lg mb-1">مبادرة صفوة</p>
+            <p class="text-gold text-sm mb-2">ابتكار وتصميم حلول تساهم في الارتقاء الثقافي</p>
+            <div class="flex justify-center gap-3 mt-6"><a href="https://t.me/Adabway" target="_blank" rel="noopener" aria-label="تليجرام مدارج الأدب" class="w-10 h-10 rounded-full bg-white/10 text-gold hover:bg-gold hover:text-navy flex items-center justify-center transition shadow"><i class="fab fa-telegram-plane"></i></a><a href="https://whatsapp.com/channel/0029Va6d4XZ7IUYSCwT8rC3e" target="_blank" rel="noopener" aria-label="قناة واتساب مدارج الأدب" class="w-10 h-10 rounded-full bg-white/10 text-gold hover:bg-gold hover:text-navy flex items-center justify-center transition shadow"><i class="fab fa-whatsapp"></i></a><a href="https://www.instagram.com/1adabway/" target="_blank" rel="noopener" aria-label="إنستجرام مدارج الأدب" class="w-10 h-10 rounded-full bg-white/10 text-gold hover:bg-gold hover:text-navy flex items-center justify-center transition shadow"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/1adabway" target="_blank" rel="noopener" aria-label="فيسبوك مدارج الأدب" class="w-10 h-10 rounded-full bg-white/10 text-gold hover:bg-gold hover:text-navy flex items-center justify-center transition shadow"><i class="fab fa-facebook-f"></i></a><a href="https://www.youtube.com/@adabway" target="_blank" rel="noopener" aria-label="يوتيوب مدارج الأدب" class="w-10 h-10 rounded-full bg-white/10 text-gold hover:bg-gold hover:text-navy flex items-center justify-center transition shadow"><i class="fab fa-youtube"></i></a><a href="https://x.com/1Adabway" target="_blank" rel="noopener" aria-label="إكس مدارج الأدب" class="w-10 h-10 rounded-full bg-white/10 text-gold hover:bg-gold hover:text-navy flex items-center justify-center transition shadow"><i class="fab fa-x-twitter"></i></a></div>
+            <div class="mt-8 text-gray-500 text-sm">&copy; <span id="year">2024</span> مبادرة صفوة. جميع الحقوق محفوظة.</div>
+        </div>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </footer>
+</body>
+</html>
