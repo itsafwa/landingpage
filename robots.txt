@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itsafwa.github.io/landingpage/sitemap.xml
