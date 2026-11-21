@@ -143,11 +143,23 @@
                 <a href="story.html" class="hover:text-gold transition">قصتنا</a>
                 <a href="faq.html" class="hover:text-gold transition">الأسئلة الشائعة</a>
             </div>
-            <button id="menuBtn" class="md:hidden text-gold text-2xl" aria-label="القائمة">
+<div class="hidden md:block"><div class="site-search relative" data-prefix="">
+                <input type="text" class="site-search-input w-36 lg:w-48 bg-white/10 border border-gold/30 rounded-full px-4 py-1.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-gold" placeholder="ابحث في الموقع…" autocomplete="off" aria-label="بحث في الموقع">
+                <div class="site-search-results absolute right-0 top-full mt-2 w-72 max-w-[85vw] bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden hidden z-50"></div>
+            </div>
+            <script src="search-index.js"></script>
+            <script src="search.js"></script></div>
+                        <button id="menuBtn" class="md:hidden text-gold text-2xl" aria-label="القائمة">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 flex-col gap-2 font-medium border-t border-gold/10">
+            <div class="py-2"><div class="site-search relative" data-prefix="">
+                <input type="text" class="site-search-input w-full bg-white/10 border border-gold/30 rounded-full px-4 py-1.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-gold" placeholder="ابحث في الموقع…" autocomplete="off" aria-label="بحث في الموقع">
+                <div class="site-search-results absolute right-0 top-full mt-2 w-72 max-w-[85vw] bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden hidden z-50"></div>
+            </div>
+            <script src="search-index.js"></script>
+            <script src="search.js"></script></div>
             <a href="#hero" class="block py-1 hover:text-gold transition">الرئيسية</a>
             <a href="#goals" class="block py-1 hover:text-gold transition">الأهداف</a>
             <a href="#initiatives" class="block py-1 hover:text-gold transition">المبادرات</a>
@@ -718,7 +730,7 @@
                 </a>
             </div>
             
-            <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8 text-sm"><a href="index.html" class="text-gray-300 hover:text-gold transition">الرئيسية</a><a href="story.html" class="text-gray-300 hover:text-gold transition">قصتنا</a><a href="index.html#directory" class="text-gray-300 hover:text-gold transition">دليل البرامج</a><a href="lectures.html" class="text-gray-300 hover:text-gold transition">سجل اللقاءات</a><a href="impressions.html" class="text-gray-300 hover:text-gold transition">انطباعات المشاركين</a><a href="faq.html" class="text-gray-300 hover:text-gold transition">الأسئلة الشائعة</a><a href="safwa-profile.pdf" class="text-gray-300 hover:text-gold transition">الملف التعريفي</a></nav>
+            <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8 text-sm"><a href="index.html" class="text-gray-300 hover:text-gold transition">الرئيسية</a><a href="story.html" class="text-gray-300 hover:text-gold transition">قصتنا</a><a href="index.html#directory" class="text-gray-300 hover:text-gold transition">دليل البرامج</a><a href="lectures.html" class="text-gray-300 hover:text-gold transition">سجل اللقاءات</a><a href="impressions.html" class="text-gray-300 hover:text-gold transition">انطباعات المشاركين</a><a href="faq.html" class="text-gray-300 hover:text-gold transition">الأسئلة الشائعة</a><a href="share.html" class="text-gray-300 hover:text-gold transition">شارك صفوة</a><a href="safwa-profile.pdf" class="text-gray-300 hover:text-gold transition">الملف التعريفي</a></nav>
             <p class="text-gold/70 text-lg">للتواصل والاستفسار: <a href="mailto:itsSafwa@gmail.com" class="hover:text-gold underline decoration-gold/30">itsSafwa@gmail.com</a> · <a href="https://t.me/ItSafwaBot" target="_blank" rel="noopener" class="hover:text-gold underline decoration-gold/30">بوت التليجرام</a></p>
             <div class="mt-12 border-t border-white/5 pt-8 text-gray-500 text-sm">
                 &copy; <span id="year">2024</span> مبادرة صفوة. جميع الحقوق محفوظة.
