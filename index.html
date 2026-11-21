@@ -11,10 +11,19 @@
     <meta property="og:image" content="0003.jpg">
     <meta property="og:type" content="website">
     
-    <!-- Google Fonts: Tajawal -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- Thmanyah font (self-hosted, both forms: Sans + Serif Display) -->
+    <style>
+        @font-face { font-family: 'thmanyah sans'; src: url('assets/fonts/thmanyahsans-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'thmanyah sans'; src: url('assets/fonts/thmanyahsans-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'thmanyah sans'; src: url('assets/fonts/thmanyahsans-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'thmanyah sans'; src: url('assets/fonts/thmanyahsans-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'thmanyah sans'; src: url('assets/fonts/thmanyahsans-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'thmanyah serif display'; src: url('assets/fonts/thmanyahserifdisplay-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'thmanyah serif display'; src: url('assets/fonts/thmanyahserifdisplay-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'thmanyah serif display'; src: url('assets/fonts/thmanyahserifdisplay-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'thmanyah serif display'; src: url('assets/fonts/thmanyahserifdisplay-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'thmanyah serif display'; src: url('assets/fonts/thmanyahserifdisplay-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+    </style>
     
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -38,7 +47,8 @@
                         }
                     },
                     fontFamily: {
-                        sans: ['Tajawal', 'sans-serif'],
+                        sans: ['thmanyah sans', 'sans-serif'],
+                        display: ['thmanyah serif display', 'serif'],
                     }
                 }
             }
@@ -48,10 +58,13 @@
     <style>
         /* Custom Styles & Utilities */
         body {
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'thmanyah sans', sans-serif;
             background-color: #f8f9fa;
             color: #333;
             overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'thmanyah serif display', serif;
         }
 
         /* Scrollbar */
