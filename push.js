@@ -77,7 +77,7 @@
             a.parentNode.insertBefore(makeButton(program), a.nextSibling);
         });
         var slot = document.getElementById('push-cta');
-        if (slot) slot.appendChild(makeButton('', 'inline-block bg-gold text-navy text-sm font-bold px-5 py-2 rounded-full hover:bg-gold-dark transition'));
+        if (slot) slot.appendChild(makeButton('', 'inline-block bg-gold text-navy text-lg font-bold px-10 py-4 rounded-full shadow-lg hover:bg-gold-dark transition'));
     }
 
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
