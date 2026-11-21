@@ -1,0 +1,29 @@
+/* Safwa reading accessibility: font scaling + dark mode (a11y.js toggles) */
+html[data-font="1"] { font-size: 18px; }
+html[data-font="2"] { font-size: 20px; }
+
+#safwa-a11y { position: fixed; bottom: 18px; inset-inline-start: 18px; z-index: 9999; display: flex; flex-direction: column; gap: 8px; }
+#safwa-a11y button { width: 44px; height: 44px; border-radius: 9999px; border: 1px solid rgba(197, 160, 40, .55); background: #12294d; color: #f2c14e; font-size: 17px; cursor: pointer; box-shadow: 0 4px 14px rgba(0, 0, 0, .35); display: flex; align-items: center; justify-content: center; transition: background .2s, color .2s; }
+#safwa-a11y button:hover { background: #f2c14e; color: #12294d; }
+#safwa-a11y button:focus-visible { outline: 3px solid #f2c14e; outline-offset: 2px; }
+
+html.dark body { background: #0b1526 !important; color: #e2e8f0; }
+html.dark .bg-white { background-color: #16233c !important; }
+html.dark .bg-gray-50 { background-color: #111f38 !important; }
+html.dark .bg-gray-100 { background-color: #1b2c4d !important; }
+html.dark .bg-slate-200 { background-color: #24365a !important; }
+html.dark .bg-green-50 { background-color: #12352a !important; }
+html.dark .bg-red-50 { background-color: #3d1a1a !important; }
+html.dark .text-navy { color: #d7e6ff !important; }
+html.dark .text-gray-700 { color: #e2e8f0 !important; }
+html.dark .text-gray-600 { color: #c3cede !important; }
+html.dark .text-gray-500 { color: #9fb0c9 !important; }
+html.dark .text-gray-400 { color: #8496b3 !important; }
+html.dark .text-gold-dark { color: #f2c14e !important; }
+html.dark .border-gray-100 { border-color: #2a3f63 !important; }
+html.dark .border-gray-200 { border-color: #2a3f63 !important; }
+html.dark .border-gray-300 { border-color: #35507e !important; }
+html.dark .shadow-sm, html.dark .shadow-md, html.dark .shadow-lg { box-shadow: 0 4px 18px rgba(0, 0, 0, .55) !important; }
+html.dark input, html.dark select, html.dark textarea { background-color: #16233c !important; color: #e2e8f0 !important; border-color: #35507e !important; }
+html.dark input::placeholder { color: #8496b3 !important; }
+html.dark .lec-row, html.dark .prog-card { background-color: #16233c !important; }
