@@ -1,4 +1,4 @@
-const CACHE = 'safwa-v7';
+const CACHE = 'safwa-v8';
 const CORE = ['./', 'index.html', 'assets/safwa-logo.webp', 'search-index.js', 'search.js', 'offline.html', 'tailwind.css', 'tg.js', 'install.js'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).then(() => self.skipWaiting()));
