@@ -245,9 +245,11 @@
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold text-white mb-3"><i class="fas fa-bell text-gold ml-2"></i> تنبيهات صفوة الفورية</h2>
             <p class="text-white/85 text-lg leading-relaxed max-w-2xl mx-auto mb-6">يصلك إشعار على جهازك فور فتح التسجيل في أي برنامج جديد من برامج صفوة، فلا يفوتك مقعدك.</p>
-            <span id="push-cta"><span class="text-white/70">تظهر هنا التنبيهات الفورية في المتصفحات الداعمة لها (كروم وسفاري الحديثان).</span></span>
-            <p class="text-white/60 text-sm mt-4">اشتراك مجهول تمامًا: لا نطلب اسمًا ولا بريدًا، ويمكنك إيقاف التنبيهات في أي وقت من إعدادات متصفحك.</p>
+            <div id="push-cta"></div>
+            <p id="push-fallback" class="text-white/70 mt-3">تظهر هنا التنبيهات الفورية في المتصفحات الداعمة لها (كروم وسفاري الحديثان).</p>
+            <script>if('serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window){var f=document.getElementById('push-fallback');if(f)f.style.display='none';}</script>
             <div id="install-cta" class="mt-5"></div>
+            <p class="text-white/60 text-sm mt-4">اشتراك مجهول تمامًا: لا نطلب اسمًا ولا بريدًا، ويمكنك إيقاف التنبيهات في أي وقت من إعدادات متصفحك.</p>
         </div>
     </section>
 

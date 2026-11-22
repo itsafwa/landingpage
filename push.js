@@ -79,6 +79,8 @@
             var program = (a.getAttribute('data-goatcounter-click') || '').replace('notify-', '');
             a.parentNode.insertBefore(makeButton(program), a.nextSibling);
         });
+        var fb = document.getElementById('push-fallback');
+        if (fb) fb.style.display = 'none';
         var slot = document.getElementById('push-cta');
         if (slot) { slot.innerHTML = ''; slot.appendChild(makeButton('', 'inline-block bg-gold text-navy text-lg font-bold px-10 py-4 rounded-full shadow-lg hover:bg-gold-dark transition')); }
     }
