@@ -60,7 +60,10 @@
         btn.type = 'button';
         btn.className = extraClass || 'inline-block bg-navy text-gold text-xs font-bold px-3 py-1 rounded-full mr-2 hover:bg-navy-light transition';
         btn.innerHTML = '<i class="fas fa-bell ml-1"></i> فعّل التنبيه الفوري';
-        if (program) btn.setAttribute('data-program', program);
+        if (program) {
+            btn.setAttribute('data-program', program);
+            btn.innerHTML = '<i class="fas fa-bell ml-1"></i> نبّهني فور فتح هذا البرنامج';
+        }
         btn.addEventListener('click', function () { activate(btn); });
         if (Notification.permission === 'denied') setState(btn, 'denied');
         else if (Notification.permission === 'granted') {
