@@ -133,12 +133,12 @@
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-navy/95 backdrop-blur-md text-white shadow-lg border-b border-gold/20">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
+        <div class="container mx-auto px-4 xl:px-6 py-4 flex flex-nowrap justify-between items-center gap-4">
+            <div class="flex items-center gap-3 shrink-0">
                 <img src="assets/safwa-nav.webp" alt="شعار صفوة" class="h-12 w-12 rounded-full object-cover border border-gold/50" onerror="this.src='https://placehold.co/100x100/1a1b35/d4af37?text=صفوة'">
                 <span class="text-2xl font-bold text-gold">صفوة</span>
             </div>
-            <div class="hidden md:flex gap-6 font-medium" id="navLinks">
+            <div class="hidden xl:flex items-center gap-4 2xl:gap-6 font-medium text-sm 2xl:text-base [&>a]:whitespace-nowrap" id="navLinks">
                 <a href="#hero" class="hover:text-gold transition">الرئيسية</a>
                 <a href="#goals" class="hover:text-gold transition">الأهداف</a>
                 <a href="#initiatives" class="hover:text-gold transition">المبادرات</a>
@@ -150,17 +150,17 @@
                 <a href="library.html" class="hover:text-gold transition">مكتبة صفوة</a>
                 <a href="faq.html" class="hover:text-gold transition">الأسئلة الشائعة</a>
             </div>
-<div class="hidden md:block"><div class="site-search relative" data-prefix="">
-                <input type="text" class="site-search-input w-36 lg:w-48 bg-white/10 border border-gold/30 rounded-full px-4 py-1.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-gold" placeholder="ابحث في الموقع…" autocomplete="off" aria-label="بحث في الموقع">
+<div class="hidden xl:block shrink-0"><div class="site-search relative" data-prefix="">
+                <input type="text" class="site-search-input w-40 2xl:w-48 bg-white/10 border border-gold/30 rounded-full px-4 py-1.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-gold" placeholder="ابحث في الموقع…" autocomplete="off" aria-label="بحث في الموقع">
                 <div class="site-search-results absolute right-0 top-full mt-2 w-72 max-w-[85vw] bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden hidden z-50"></div>
             </div>
             <script src="search-index.js"></script>
             <script src="search.js"></script><script src="push.js" defer></script><link rel="stylesheet" href="a11y.css"><script src="a11y.js" defer></script></div>
-                        <button id="menuBtn" class="md:hidden text-gold text-2xl" aria-label="القائمة">
+                        <button id="menuBtn" class="xl:hidden text-gold text-2xl" aria-label="القائمة">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 flex-col gap-2 font-medium border-t border-gold/10">
+        <div id="mobileMenu" class="hidden xl:hidden px-6 pb-4 flex-col gap-2 font-medium border-t border-gold/10">
             <div class="py-2"><div class="site-search relative" data-prefix="">
                 <input type="text" class="site-search-input w-full bg-white/10 border border-gold/30 rounded-full px-4 py-1.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-gold" placeholder="ابحث في الموقع…" autocomplete="off" aria-label="بحث في الموقع">
                 <div class="site-search-results absolute right-0 top-full mt-2 w-72 max-w-[85vw] bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden hidden z-50"></div>
