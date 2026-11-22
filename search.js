@@ -41,9 +41,16 @@
         box.classList.remove('hidden');
         return;
       }
-      var all = (window.SAFWA_SEARCH || []).filter(function (e) {
-        return norm(e.t).indexOf(nq) > -1 || norm(e.k).indexOf(nq) > -1 || norm(e.s).indexOf(nq) > -1;
-      });
+      var all = (window.SAFWA_SEARCH || []).map(function (e, i) {
+        var nt = norm(e.t), score = -1;
+        if (nt.indexOf(nq) === 0) score = 4;
+        else if (nt.indexOf(nq) > -1) score = 3;
+        else if (norm(e.s).indexOf(nq) > -1) score = 2;
+        else if (norm(e.k).indexOf(nq) > -1) score = 1;
+        return { e: e, i: i, score: score };
+      }).filter(function (m) { return m.score > -1; })
+        .sort(function (a, b) { return b.score - a.score || a.i - b.i; })
+        .map(function (m) { return m.e; });
       if (!all.length) {
         box.innerHTML = '<div class="px-4 py-3 text-sm text-gray-500">لا توجد نتائج مطابقة</div>';
       } else {
