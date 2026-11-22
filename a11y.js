@@ -39,8 +39,23 @@
       applyDark(dark); moonIcon();
       try { localStorage.setItem('safwa-dark', dark ? '1' : '0'); } catch (e) {}
     });
-    box.appendChild(bFont);
-    box.appendChild(bDark);
+    var actions = document.createElement('div');
+    actions.className = 'a11y-actions';
+    actions.appendChild(bFont);
+    actions.appendChild(bDark);
+    var bToggle = document.createElement('button');
+    bToggle.type = 'button';
+    bToggle.className = 'a11y-toggle';
+    bToggle.title = 'خيارات سهولة الوصول';
+    bToggle.setAttribute('aria-label', 'خيارات سهولة الوصول');
+    bToggle.setAttribute('aria-expanded', 'false');
+    bToggle.innerHTML = '<i class="fas fa-universal-access"></i>';
+    bToggle.addEventListener('click', function () {
+      var open = box.classList.toggle('open');
+      bToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    box.appendChild(actions);
+    box.appendChild(bToggle);
     document.body.appendChild(box);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build); else build();

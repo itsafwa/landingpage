@@ -1,5 +1,5 @@
-const CACHE = 'safwa-v3';
-const CORE = ['./', 'index.html', 'assets/safwa-logo.webp', 'search-index.js', 'search.js'];
+const CACHE = 'safwa-v4';
+const CORE = ['./', 'index.html', 'assets/safwa-logo.webp', 'search-index.js', 'search.js', 'offline.html'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).then(() => self.skipWaiting()));
 });
@@ -35,6 +35,10 @@ self.addEventListener('fetch', (e) => {
         caches.open(CACHE).then((c) => c.put(e.request, copy));
         return r;
       })
-      .catch(() => caches.match(e.request, { ignoreSearch: true }))
+      .catch(() => caches.match(e.request, { ignoreSearch: true }).then((r) => {
+        if (r) return r;
+        if (e.request.mode === 'navigate') return caches.match('offline.html');
+        return Response.error();
+      }))
   );
 });
