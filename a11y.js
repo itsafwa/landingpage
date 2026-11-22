@@ -10,7 +10,13 @@
   var font = 0, dark = false;
   try {
     font = parseInt(localStorage.getItem('safwa-font') || '0', 10) || 0;
-    dark = localStorage.getItem('safwa-dark') === '1';
+    var storedDark = localStorage.getItem('safwa-dark');
+    if (storedDark !== null) {
+      dark = storedDark === '1';
+    } else if (window.matchMedia) {
+      /* No saved choice yet: follow the system theme on first visits. */
+      dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
   } catch (e) { /* private mode */ }
   applyFont(font); applyDark(dark);
 
