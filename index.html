@@ -121,10 +121,10 @@
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-navy/95 backdrop-blur-md text-white shadow-lg border-b border-gold/20">
-        <div class="container mx-auto px-4 xl:px-6 py-4 flex flex-nowrap justify-between items-center gap-4">
+        <div class="container mx-auto px-4 xl:px-6 py-4 flex flex-nowrap justify-between items-center gap-2 sm:gap-4">
             <a href="index.html" class="flex items-center gap-3 shrink-0" aria-label="مبادرة صفوة — الصفحة الرئيسية">
                 <img src="assets/safwa-nav.webp" alt="شعار صفوة" class="h-12 w-12 rounded-full object-cover border border-gold/50" onerror="this.src='https://placehold.co/100x100/1a1b35/d4af37?text=صفوة'">
-                <span class="text-2xl font-bold text-gold">صفوة</span>
+                <span class="text-2xl font-bold text-gold hidden min-[400px]:inline">صفوة</span>
             </a>
             <div class="hidden xl:flex items-center gap-4 2xl:gap-6 font-medium text-sm 2xl:text-base [&>a]:whitespace-nowrap" id="navLinks">
                 <a href="#hero" class="hover:text-gold transition">الرئيسية</a>
@@ -147,14 +147,14 @@
                 <a href="faq.html" class="hover:text-gold transition">الأسئلة الشائعة</a>
                 <a href="contact.html" class="hover:text-gold transition">تواصل معنا</a>
             </div>
-<a href="#volunteer" aria-label="تطوّع معنا" title="تطوّع معنا" class="shrink-0 bg-gold text-navy flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gold-light transition shadow font-bold text-sm"><i class="fas fa-hands-helping"></i> تطوّع معنا</a>
+<a href="#volunteer" aria-label="تطوّع معنا" title="تطوّع معنا" class="shrink-0 bg-gold text-navy flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-gold-light transition shadow font-bold text-[13px] sm:text-sm"><i class="fas fa-hands-helping"></i> تطوّع معنا</a>
 <div class="hidden xl:block shrink-0"><div class="site-search relative" data-prefix="">
                 <input type="text" class="site-search-input w-40 2xl:w-48 bg-white/10 border border-gold/30 rounded-full px-4 py-1.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/60" placeholder="ابحث في الموقع…" autocomplete="off" aria-label="بحث في الموقع">
                 <div class="site-search-results absolute right-0 top-full mt-2 w-72 max-w-[85vw] bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden hidden z-50"></div>
             </div>
             <script src="search-index.js"></script>
             <script src="search.js"></script><script src="push.js" defer></script><link rel="stylesheet" href="a11y.css"><script src="a11y.js" defer></script><script src="https://telegram.org/js/telegram-web-app.js"></script><script src="tg.js" defer></script><script src="install.js" defer></script></div>
-                        <button id="menuBtn" class="xl:hidden text-gold text-2xl" aria-label="القائمة">
+                        <button id="menuBtn" class="xl:hidden shrink-0 w-11 h-11 flex items-center justify-center text-gold text-2xl" aria-label="القائمة">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
