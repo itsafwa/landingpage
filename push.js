@@ -62,7 +62,7 @@
         btn.innerHTML = '<i class="fas fa-bell ml-1"></i> فعّل التنبيه الفوري';
         if (program) {
             btn.setAttribute('data-program', program);
-            btn.innerHTML = '<i class="fas fa-bell ml-1"></i> نبّهني فور فتح هذا البرنامج';
+            btn.innerHTML = '<i class="fas fa-bell ml-1"></i> تنبيه فوري في متصفحي';
         }
         btn.addEventListener('click', function () { activate(btn); });
         if (Notification.permission === 'denied') setState(btn, 'denied');
