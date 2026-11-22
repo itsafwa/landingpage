@@ -57,10 +57,10 @@
                 <input type="text" class="site-search-input w-40 lg:w-56 bg-white/10 border border-gold/30 rounded-full px-4 py-1.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/60" placeholder="ابحث في الموقع…" autocomplete="off" aria-label="بحث في الموقع">
                 <div class="site-search-results absolute right-0 top-full mt-2 w-72 max-w-[85vw] bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden hidden z-50"></div>
             </div>
-            <a href="../index.html#volunteer" aria-label="تطوّع معنا" title="تطوّع معنا" class="shrink-0 w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center hover:bg-gold-light transition shadow"><i class="fas fa-hands-helping"></i></a>
+            <a href="../index.html#volunteer" aria-label="تطوّع معنا" title="تطوّع معنا" class="shrink-0 bg-gold text-navy flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gold-light transition shadow font-bold text-sm"><i class="fas fa-hands-helping"></i> تطوّع معنا</a>
             <script src="../search-index.js"></script>
             <script src="../search.js"></script>
-            <script src="../push.js" defer></script><link rel="stylesheet" href="../a11y.css"><script src="../a11y.js" defer></script>
+            <script src="../push.js" defer></script><link rel="stylesheet" href="../a11y.css"><script src="../a11y.js" defer></script><script src="https://telegram.org/js/telegram-web-app.js"></script><script src="../tg.js" defer></script>
                         <a href="../index.html" class="text-gold hover:text-gold-light transition text-sm font-semibold"><i class="fas fa-arrow-right ml-2"></i>العودة إلى الصفحة الرئيسة</a>
         </div>
     </div>
@@ -121,5 +121,6 @@
     </footer>
     <script data-goatcounter="https://safwa.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>(function(){var fp=document.getElementById('fPlaylist'),fl=document.getElementById('fLecturer'),fs=document.getElementById('fSearch'),fc=document.getElementById('fCount');if(!fp||!fl||!fs)return;function norm(s){return (s||'').replace(/[\u064B-\u0652\u0640]/g,'').replace(/[إأآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').toLowerCase();}var rows=[].slice.call(document.querySelectorAll('.lec-row'));var groups=[].slice.call(document.querySelectorAll('.lec-group'));var total=rows.length;function apply(){var p=fp.value,l=fl.value,q=norm(fs.value),n=0;rows.forEach(function(r){var ok=(!p||r.getAttribute('data-playlists').split('|').indexOf(p)>-1)&&(!l||r.getAttribute('data-lecturer')===l)&&(!q||r.getAttribute('data-title').indexOf(q)>-1);r.style.display=ok?'':'none';if(ok)n++;});groups.forEach(function(g){var any=false;g.querySelectorAll('.lec-row').forEach(function(r){if(r.style.display!=='none')any=true;});g.style.display=any?'':'none';});if(fc)fc.textContent=(p||l||q)?('يُعرض '+n+' من '+total+' لقاءً'):(total+' لقاءً في الفهرس');}fp.addEventListener('change',apply);fl.addEventListener('change',apply);fs.addEventListener('input',apply);apply();})();</script>
+<script>(function(){var h=(location.hash||'').slice(1);if(h.indexOf('lec-')!==0)return;var el=document.getElementById(h);if(!el)return;var fp=document.getElementById('fPlaylist'),fl=document.getElementById('fLecturer'),fs=document.getElementById('fSearch');if(fp)fp.value='';if(fl)fl.value='';if(fs)fs.value='';[fp,fl,fs].forEach(function(x){if(x)x.dispatchEvent(new Event('input'))});setTimeout(function(){el.scrollIntoView({block:'center'});el.style.outline='3px solid #d4af37';el.style.background='#fffbeb';setTimeout(function(){el.style.outline='';el.style.background='';},4000);},150);})();</script>
 </body>
 </html>
