@@ -28,13 +28,11 @@ html.dark input, html.dark select, html.dark textarea { background-color: #16233
 html.dark input::placeholder { color: #8496b3 !important; }
 html.dark .lec-row, html.dark .prog-card { background-color: #16233c !important; }
 
-/* Mobile: collapse into one small toggle button, safe-area aware */
-#safwa-a11y .a11y-toggle { display: none; }
-#safwa-a11y .a11y-actions { display: flex; flex-direction: column; gap: 8px; }
+/* Collapsed into one toggle button at every width (panel opens on tap) */
+#safwa-a11y .a11y-toggle { display: flex; }
+#safwa-a11y .a11y-actions { display: none; flex-direction: column; gap: 8px; }
+#safwa-a11y.open .a11y-actions { display: flex; }
 @media (max-width: 640px) {
   #safwa-a11y { bottom: calc(12px + env(safe-area-inset-bottom)); inset-inline-start: 12px; }
   #safwa-a11y button { width: 40px; height: 40px; font-size: 15px; }
-  #safwa-a11y .a11y-toggle { display: flex; }
-  #safwa-a11y .a11y-actions { display: none; }
-  #safwa-a11y.open .a11y-actions { display: flex; }
 }
