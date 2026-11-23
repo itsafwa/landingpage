@@ -15,6 +15,7 @@ html.dark .bg-slate-200 { background-color: #24365a !important; }
 html.dark .bg-green-50 { background-color: #12352a !important; }
 html.dark .bg-red-50 { background-color: #3d1a1a !important; }
 html.dark .text-navy { color: #d7e6ff !important; }
+html.dark .text-navy\/60 { color: #9fb0c9 !important; }
 html.dark .text-gray-700 { color: #e2e8f0 !important; }
 html.dark .text-gray-600 { color: #c3cede !important; }
 html.dark .text-gray-500 { color: #9fb0c9 !important; }
